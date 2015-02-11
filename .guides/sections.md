@@ -27,7 +27,7 @@ step: 01-implementing
 
 First, we will look at simple lists where items are indexed by their numeric position, e.g. `my_list[0]` is the first element of that array. Then, we will look at a special kind of arrays, known as "associative arrays" or "dictionaries" where we access the elements not by their numeric position in the list but by an associated key, e.g. `my_dict["CUST1202"]` which will pull up an item associated with the key `"CUST1202"`.
 
-## Task 2.1.1
+## Task 1
 
 Open [task-01.py](open_file "01-implementing/task-01.py") and run it.
 It should output
@@ -37,7 +37,7 @@ It should output
 Jack is going
 ```
 
-## Task 2.1.2
+## Task 2
 
 Next, implement this program that shows two ways of adding to a list. Append adds an item to the last position (first empty). Appending a list to a list, creates a nested list – Python's answer to traditional arrays. Extend also adds items to the end of the list but if the item being added is also a list, it will "flatten" it – extract all of its elements and add them automatically.
 
@@ -51,7 +51,7 @@ It should output
 [10, 11, 45, [33, 44], 33, 44]
 ```
 
-## Task 2.1.3
+## Task 3
 
 Deleting from lists is done in three ways:
 
@@ -59,7 +59,7 @@ Deleting from lists is done in three ways:
 2. Delete a specific value (only deletes the first instance, needs to run repeatedly to remove multiple occurances) – `my_list.remove(value)`
 3. List slicing `my_list = my_list[2:4]` – this copies the smaller "slice" between the third `(2)` to 4th element over the original list.
 
-## Task 2.1.4a
+## Task 4a
 
 Add the following lines to the program above:
 
@@ -77,7 +77,7 @@ Let's compare the list contents before and after these two run:
 
 As you can see, gone is 11 from position 1 (second position in a zero-base list), then 10 from the first position is gone, too.
 
-## Task 2.1.4b
+## Task 4b
 
 If you comment out the two new lines and insert this:
 
@@ -102,7 +102,7 @@ layout: 2-panels-tree
 step: 02-list-operations
 ---
 
-## Task 2.2.1
+## Task 1
 
 "Enumerating" through a list – that means printing out not just the items but their positions, like so:
 
@@ -121,7 +121,7 @@ Pela is at position 1
 John is at position 2
 ```
 
-## Task 2.2.2
+## Task 2
 
 Comparing lists:
 
@@ -134,7 +134,7 @@ It should output
 False
 ```
 
-## Task 2.2.3
+## Task 3
 
 
 Open [task-03.py](open_file "02-list-operations/task-03.py") and run it.
@@ -150,7 +150,7 @@ Bobdelimiter Pameladelimiter Amir
 
 **Extension:** modify the program above, so that the word "delimiter" doesn't run into their names.
 
-## Task 2.2.4
+## Task 4
 
 Performing calculations on list items en masse:
 
@@ -171,7 +171,7 @@ It should output
 18
 ```
 
-## Task 2.2.5
+## Task 5
 
 Open [task-05.py](open_file "02-list-operations/task-05.py"), run it and supply comments where needed.
 It should output
@@ -180,7 +180,7 @@ It should output
 All list items must be strings to join
 ```
 
-## Task 2.2.6
+## Task 6
 
 To make "join" work on the list items, we need to individual convert them to strings. Our knowledge of list comprehension (running one-line loops through lists) will come in handy.
 
@@ -200,7 +200,7 @@ layout: 2-panels-tree
 step: 03-searching
 ---
 
-## Task 2.3.1
+## Task 1
 
 Python allows to sort lists using the built-in sorted function. Note, that the original list is not affected, we get a sorted copy of the original list and that is what being printed. This is similar to an SQL select query that brings us a copy of a table without modifying its data.
 
@@ -213,7 +213,7 @@ It should output
 ['Amir', 'Bob', 'Pamela']
 ```
 
-## Task 2.3.2
+## Task 2
 
 
 We often need to append to lists by asking a user to supply the new values. This program will accomplish just that.
@@ -231,7 +231,7 @@ Type <Enter> to add another, or type 'quit' to exit >> quit
 >>>
 ```
 
-## Task 2.3.3
+## Task 3
 
 Once we have a good list, we can manipulate it. Here we will randomly pick winners off a list of names. We will create a function that generates a random number within the dimensions of our list, then it will remove (pop) an item stored at an index equal to the random number generated, e.g. if the random number was 2, then Amir will be removed. However, the "pop" function in Python has a second functionality. As it is removing an item it can copy it top somewhere – in this case, it will be passed out of a function.
 
@@ -255,7 +255,7 @@ step: 04-nested-lists
 
 > **Reminder:** nested lists are multi-dimensional arrays where each element can be accessed by multi-index, e.g. `x[r][c]` will give us an element of the two dimensional list at certain row and column.
 
-## Task 2.4.1
+## Task 1
 
 Open [task-01.py](open_file "04-nested-lists/task-01.py") and run it.
 It should output
@@ -265,7 +265,7 @@ It should output
 6 Woods Lane
 ```
 
-## Task 2.4.2
+## Task 2
 
 Zipping lists creates nested lists where each row is made up of first list's first item as column 0, and the second list's first item as column 1.
 
@@ -311,7 +311,7 @@ step: 05-filters
 
 The ability to filter lists is very important. Consider a program that is creating a prefect rota. From the list of potential prefects, the program will have to exclude all who are already engaged at a particular time slot, leaving the list of possible candidates.
 
-## Task 2.5.1a
+## Task 1a
 
 The following code will take the just-in-time created list of number 0-9 and filter it to only those over 5 using an appropriately called function:
 
@@ -322,7 +322,7 @@ It should output
 [6, 7, 8, 9]
 ```
 
-## Task 2.5.1b
+## Task 1b
 
 There is more than one way to filter lists and different people end up preferring different types. Replace the line
 
@@ -339,7 +339,7 @@ filt_li = list(filter(over_five,li))
 We are now making use of the built-in Python function to filter lists. However, this function is being depreciated (its use is discouraged), so make sure you know the other methods, as well.
 
 
-## Task 2.5.1c
+## Task 1c
 
 Now replace the line with this:
 
@@ -356,7 +356,7 @@ Read what Python's inventor has to say about this:
 
 There is another commonly used list function called `map`. It runs a specified function on every list item.
 
-## Task 2.5.1d
+## Task 1d
 
 
 Replace the line
@@ -380,7 +380,7 @@ What did the mapping do?
 
 It replaced the list item with the value of the function in which that list item was an input.
 
-## Task 2.5.1e
+## Task 1e
 
 It is not very useful with our `over_five` function, but consider this code:
 
@@ -403,7 +403,7 @@ Which would output,
 
 It doubled all the values, sending every item through the function where it got transformed.
 
-## Task 2.5.1f
+## Task 1f
 
 
 You would get exactly same result by using list comprehension, replace the line
@@ -437,7 +437,7 @@ Created using curly braces rather than square brackets that we use for regular l
 
 It is fairly easy to see why they are called dictionaries.
 
-## Task 2.6.1a
+## Task 1a
 
 Here is a dictionary to an imaginary language:
 
@@ -498,7 +498,7 @@ moo
 >>>
 ```
 
-## Task 2.6.1b
+## Task 1b
 
 Open [task-01b.py](open_file "06-nested-lists/task-01b.py") and run it.
 It should output
@@ -512,7 +512,7 @@ milk moo
 want tu-tu
 ```
 
-## Task 2.6.1c
+## Task 1c
 
 Open [task-01c.py](open_file "06-nested-lists/task-01c.py") and run it.
 It should output
@@ -524,7 +524,7 @@ milk!
 M e t u - t u m i l k !
 ```
 
-## Task 2.6.2
+## Task 2
 
 Another dictionary exercise to explore different parts of a dictionary – keys and values separately.
 
@@ -553,7 +553,7 @@ Records and multidimensional arrays via nested lists in Python.
 
 A record is a list. A database is a list of records, therefore, it is a list of lists – a nested list. In Python, this is very efficient.
 
-## Task 2.7.1
+## Task 1
 
 Open [task-01.py](open_file "07-records/task-01.py") and run it.
 It should output
@@ -563,7 +563,7 @@ Boo Boo from Mexico is a smallest dog in the world!
 Lola from USA is a smallest cat in the world!
 ```
 
-## Task 2.7.2
+## Task 2
 
 Here is another program making use of record-like structures.
 Open [task-02.py](open_file "07-records/task-02.py"), then add more questions and validation for empty input from a user.
@@ -594,7 +594,7 @@ layout: 2-panels-tree
 step: 08-files
 ---
 
-## Task 2.8.1
+## Task 1
 
 Spreadsheets are very important tools in today's office. They are two dimensional lists (sometimes, three dimensional if you count the ability to link cells of different sheets in a workbook. Flat file databases that you learn in the database section of the syllabus are also spreadsheets. While there are different packages that can show and allow editing of a spreadsheets, there is one common format that is used to exchange data between different spreadsheet packages. It is called CSV for "comma separated values". Below, you see a screenshot of one such a file. On each row, columns are separated by commas (hence, comma-separated), while the new line character separates the rows. This skills is building on GCSE list handling, as some of the tasks come with data stored in the CSV form.
 
@@ -619,7 +619,7 @@ This program opened the file in a read only mode (rt), reads the file line by li
 
 Extension: implement the solution above without removing the two right-most characters. What is the difference in output?
 
-## Task 2.8.2
+## Task 2
 
 To go beyond GCSE, we need to learn how to work with multiple files at once. Relational databases are an expectation at A level, which means that a program needs to read multiple CSV files (this skill is later transferrable to SQL, which is also required at A level). The program also needs to combine (join) data from different tables matching by their relationships between primary and foreign keys.
 
@@ -640,13 +640,13 @@ Another horoscope?, y/nn
 Peace, out!
 ```
 
-## Task 2.8.3
+## Task 3
 
 Writing a dictionary to a flat file database in a csv file.
 
 Implement a program that can read a CSV file that looks like the screenshot above (you can create it either in Notepad or a spreadsheet package).
 
-## Task 2.8.4
+## Task 4
 
 This program will save a dictionary to a txt file. If we change the file extension to ".csv" from ".txt", we can open this file with a spreadsheet program. Notice, how for convenience, we used Python's ability to run other programs and open files in them – we are launching Notepad with the file we created to save us searching for it.
 
@@ -690,7 +690,7 @@ my_list[1:]
 
 It is not very efficient with memory, so for industrial-strength applications, Python comes with a special Queue module that you can import and it will give you access to memory efficient features of Queues and Stacks. ( [http://docs.python.org/3.3/library/queue.html](http://docs.python.org/3.3/library/queue.html))
 
-## Task 2.9.1a
+## Task 1a
 
 Imagine a screen in a store that shows a currently served customer service ticket on a big screen, as customers tear off a number ticket off a roll at the entrance. A store clerk has an access to a computer where a program allows him/her to enter tickets as they are taken by customers. Tickets registered are entered into the first-come first-served queue. The same clerk then keeps track of the tickets served and removes the processed tickets from the queue. The program has a menu with 3 options: (1) add a ticket; (2) serve a ticket; (3) quit. Implement this program.
 
@@ -731,11 +731,11 @@ No tickets in queue
 >>>
 ```
 
-## Task 2.9.1b
+## Task 1b
 
 Modify this program, so a few sequentially numbered tickets are loaded into the queue automatically, rather having to enter them manually.
 
-## Task 2.9.1c
+## Task 1c
 
 Adapt this program to accept a list of directions to a place, like on a SatNav and when the user presses `<Enter>` the directions will be stricken off the list, until all have been popped. The program will then display a message "You arrived at your destination".
 
@@ -748,7 +748,7 @@ layout: 2-panels-tree
 step: 10-stacks
 ---
 
-## Task 2.10.1
+## Task 1
 
 A speleologist relies on a Python program installed on his handheld device to keep track of all the special features, e.g. "sharp drop", etc. Write a program that will allow the user, as he goes through the cave, to store a list of features or notes to self in reverse chronological order. E.g. "sharp drop", "low ceiling", "3 stalagmites","long walk", "cave entrance". Then as he goes back and comes across the feature, he can delete it off the list to avoid confusion.
 
