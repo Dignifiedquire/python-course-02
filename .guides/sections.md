@@ -1,6 +1,8 @@
 ---
 title: "Arrays, Queues and Stacks"
-files: []
+files:
+  - action: close
+    path: "#tabs"
 layout: 2-panels-tree
 ---
 
@@ -16,8 +18,11 @@ I wasn't sure about the military terminology here – is it appropriate? It work
 
 ---
 title: "Implementing arrays"
-files: []
+files:
+  - action: close
+    path: "#tabs"
 layout: 2-panels-tree
+step: 01-implementing
 ---
 
 First, we will look at simple lists where items are indexed by their numeric position, e.g. `my_list[0]` is the first element of that array. Then, we will look at a special kind of arrays, known as "associative arrays" or "dictionaries" where we access the elements not by their numeric position in the list but by an associated key, e.g. `my_dict["CUST1202"]` which will pull up an item associated with the key `"CUST1202"`.
@@ -90,8 +95,11 @@ Notice, how despite having the same effect, these three ways of removing items w
 
 ---
 title: "More useful list operations"
-files: []
+files:
+  - action: close
+    path: "#tabs"
 layout: 2-panels-tree
+step: 02-list-operations
 ---
 
 ## Task 2.2.1
@@ -185,8 +193,11 @@ It should output
 
 ---
 title: "Searching and sorting is built in!"
-files: []
+files:
+  - action: close
+    path: "#tabs"
 layout: 2-panels-tree
+step: 03-searching
 ---
 
 ## Task 2.3.1
@@ -235,8 +246,11 @@ Third prize Bob, Second prize Anna, ***FIRST PRIZE*** Amir
 
 ---
 title: "Nested lists"
-files: []
+files:
+  - action: close
+    path: "#tabs"
 layout: 2-panels-tree
+step: 04-nested-lists
 ---
 
 > **Reminder:** nested lists are multi-dimensional arrays where each element can be accessed by multi-index, e.g. `x[r][c]` will give us an element of the two dimensional list at certain row and column.
@@ -288,8 +302,11 @@ Extension activity: Create 2 lists of 5 major geographic discoveries, where the 
 
 ---
 title: "Applying filters to lists"
-files: []
+files:
+  - action: close
+    path: "#tabs"
 layout: 2-panels-tree
+step: 05-filters
 ---
 
 The ability to filter lists is very important. Consider a program that is creating a prefect rota. From the list of potential prefects, the program will have to exclude all who are already engaged at a particular time slot, leaving the list of possible candidates.
@@ -409,8 +426,11 @@ It is, of course, possible to do this with a loop, but Python here provides are 
 
 ---
 title: "Dictonaries (Associative arrays)"
-files: []
+files:
+  - action: close
+    path: "#tabs"
 layout: 2-panels-tree
+step: 06-dictionaries
 ---
 
 Created using curly braces rather than square brackets that we use for regular lists. There is no numeric indexing, just associations. Dictionaries are special lists of pairs that are great for lookups, e.g. English word for a French word, page number and the topic on that page. We can say, that a dictionary is like a 2-column list, where the first column must be unique (just like primary key in database entities) and is called … a key. The second column is called a value. Dictionaries don't use indices, so you can't say `dictionary[2]`, instead, to get a particular value, we look it up by its associated key, e.g. `dictionary["1805"]` will possibly return "The Battle of Trafalgar". They are often used in encryption/decryption, as each letter of a text needs to be replaced by its encrypted/decrypted value.
@@ -522,8 +542,11 @@ dict_values(['superhero', 'brother-in-law', 'plumber'])
 
 ---
 title: "Records"
-files: []
+files:
+  - action: close
+    path: "#tabs"
 layout: 2-panels-tree
+step: 07-records
 ---
 
 Records and multidimensional arrays via nested lists in Python.
@@ -564,8 +587,11 @@ Main list
 
 ---
 title: "File reading and writing"
-files: []
+files:
+  - action: close
+    path: "#tabs"
 layout: 2-panels-tree
+step: 08-files
 ---
 
 ## Task 2.8.1
@@ -641,8 +667,11 @@ True
 
 ---
 title: "Implementing queues"
-files: []
+files:
+  - action: close
+    path: "#tabs"
 layout: 2-panels-tree
+step: 09-queues
 ---
 
 We will show a simple way of programming queues through shallow copying a list to itself apart from its first element. If you remember, list slicing allows us to access a sub-list.
@@ -712,8 +741,11 @@ Adapt this program to accept a list of directions to a place, like on a SatNav a
 
 ---
 title: "Implementing stacks"
-files: []
+files:
+  - action: close
+    path: "#tabs"
 layout: 2-panels-tree
+step: 10-stacks
 ---
 
 ## Task 2.10.1
