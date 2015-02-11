@@ -8,7 +8,7 @@ for line in fread:
 
     print(noNewLineChar)
 
-    if noNewLineChar[0]! = "," and noNewLineChar[0]! = "":
+    if noNewLineChar[0] != "," and noNewLineChar[0] != "":
         twoDeeList.append(noNewLineChar.split(","))
 
 fread.close()

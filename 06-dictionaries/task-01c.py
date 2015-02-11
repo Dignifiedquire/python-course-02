@@ -1,3 +1,9 @@
+d_e = {
+    "milk": "moo",
+    "I": "Me",
+    "want": "tu-tu"
+}
+
 s = "I want milk!"
 
 translation = ""

@@ -13,7 +13,7 @@ def served():
 
 def ui():
     u = ""
-    while u! = "3":
+    while u != "3":
         u = input("1 to add to queue\n2 to serve next customer\n3 to quit")
         if u == "1":
             add()

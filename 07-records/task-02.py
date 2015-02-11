@@ -1,7 +1,7 @@
 Records = []
 EnterAnother = ""
 
-while EnterAnother! = "n".lower():
+while EnterAnother != "n".lower():
     aRecord = []
 
     # Fill one record with user's input

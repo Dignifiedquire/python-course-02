@@ -13,7 +13,7 @@ def went_through():
 
 def ui():
     u = ""
-    while u! = "3":
+    while u != "3":
         u = input("1 to add a feature\n2 if you see the feature\n3 to quit")
 
         if u == "1":
